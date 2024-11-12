@@ -9,6 +9,15 @@ body {
     line-height: 1.6;
     background-color: #f9f9f9;
 }
+.lgpage{
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.lgpage:hover{
+     color: orangered;
+}
 
 
 header {
