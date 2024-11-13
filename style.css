@@ -45,9 +45,6 @@ header {
 }
 
 #login-link {
-    position: absolute;
-    top: 15px;
-    right: 20px;
     display: flex;
     align-items: center;
 }
@@ -67,7 +64,7 @@ header {
     width: 25px;
     height: 3px;
     background-color: white;
-    margin: 5px;
+    margin : 5px;
 }
 
 .nav-links {
@@ -76,13 +73,14 @@ header {
     gap: 10px;
 }
 
-.nav-links a {
+.nav-links a,.footer-links ul li a {
     color: var(--text-color-light);
     text-decoration: none;
     padding: 5px 10px;
     font-weight: bold;
 }
-.nav-links a:hover{
+
+.nav-links a:hover,.footer-links a:hover {
     color: #010c5e;
 }
 
@@ -136,6 +134,12 @@ header {
     background-color: #010c5e;
 }
 
+h1 {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
 .categories {
     display: flex;
     justify-content: space-around;
@@ -174,32 +178,33 @@ header {
     text-align: center;
 }
 
-.carousel-container {
+.slider-container {
     position: relative;
     overflow: hidden;
     width: 100%;
     margin-top: 20px;
 }
 
-.product-grid, .offer-grid {
+.slides {
     display: flex;
     transition: transform 0.5s ease;
 }
 
 .product-card, .offer-card {
-    min-width: 50%;
-    flex-shrink: 0;
-    text-align: center;
-    background: white;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
+    flex: 0 0 33.33%;
+    box-sizing: border-box; 
+    padding: 10px;
 }
 
 .product-card img, .offer-card img {
-    width: 50%;
-    height: 200px;
-    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 600px) {
+    .product-card, .offer-card {
+        flex: 0 0 100%;
+    }
 }
 
 .product-info, .offer-info {
@@ -229,7 +234,7 @@ header {
     margin-top: 10px;
 }
 
-.carousel-container .prev-btn, .carousel-container .next-btn {
+.prev-btn, .next-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -241,18 +246,18 @@ header {
     cursor: pointer;
 }
 
-.carousel-container .prev-btn {
+.prev-btn {
     left: 0;
 }
 
-.carousel-container .next-btn {
+.next-btn {
     right: 0;
 }
 
 footer {
     background: var(--primary-color);
     color: var(--text-color-light);
-    padding: 30px 20px;
+ padding: 30px 20px;
     text-align: center;
 }
 
@@ -286,12 +291,15 @@ footer {
     color: #ccc;
 }
 
-/* Responsive Styles */
-@media (max-width: 700px) {
+@media (max-width: 810px) {
     .hamburger {
         display: block;
     }
-
+    #login-link {
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* Aligns login link to the right */
+    }
     .nav-links {
         display: none;
         flex-direction: column;

@@ -25,9 +25,9 @@
         <a href="#">Home</a>
         <a href="#">Shop by Category</a>
         <a href="#">Deals</a>
-        <a href="#">Blog</a>
-        <a href="#">About us</a>
-        <a href="#">Contact us</a>
+        <a href="#">Cart</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </nav>
 </header>
 
@@ -39,8 +39,9 @@
         <a href="#" class="cta-btn">Shop Now</a>
     </div>
 </section>
-
+<h1>Categories</h1>
 <section class="categories">
+    
     <div class="category-card">
         <img src="https://th.bing.com/th?id=OIP.k5aOhvY5U-C23BLYwDGmRgHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="CPU">
         <h3 class="card-title">CPUs</h3>
@@ -61,16 +62,15 @@
 
 <section class="popular-products">
     <h2>Popular Products</h2>
-    <div class="carousel-container">
-        <button class="prev-btn" onclick="prevSlide('.product-grid')">&#10094;</button>
-        <div class="product-grid">
+    <div class="slider-container" id="popular-slider">
+        <div class="slides">
             <div class="product-card">
                 <img src="https://via.placeholder.com/300x200" alt="Product 1">
                 <div class="product-info">
                     <p>High-performance CPU</p>
                     <h4>Product 1</h4>
                     <div class="price">$199.99</div>
-                    <a href="#" class="cta-btn">Buy Now</a>
+                    <a href="#" class="cta-btn">Add to cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -79,7 +79,7 @@
                     <p>Advanced Graphics Card</p>
                     <h4>Product 2</h4>
                     <div class="price">$299.99</div>
-                    <a href="#" class="cta-btn">Buy Now</a>
+                    <a href="#" class="cta-btn">Add to cart</a>
                 </div>
             </div>
             <div class="product-card">
@@ -88,26 +88,44 @@
                     <p>High-speed SSD</p>
                     <h4>Product 3</h4>
                     <div class="price">$399.99</div>
-                    <a href="#" class="cta-btn">Buy Now</a>
+                    <a href="#" class="cta-btn">Add to cart</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Product 3">
+                <div class="product-info">
+                    <p>High-speed SSD</p>
+                    <h4>Product 3</h4>
+                    <div class="price">$399.99</div>
+                    <a href="#" class="cta-btn">Add to cart</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Product 3">
+                <div class="product-info">
+                    <p>High-speed SSD</p>
+                    <h4>Product 3</h4>
+                    <div class="price">$399.99</div>
+                    <a href="#" class="cta-btn">Add to cart</a>
                 </div>
             </div>
         </div>
-        <button class="next-btn" onclick="nextSlide('.product-grid')">&#10095;</button>
+        <button class="prev-btn" onclick="prevSlide('popular-slider')">&#10094;</button>
+        <button class="next-btn" onclick="nextSlide('popular-slider')">&#10095;</button>
     </div>
 </section>
 
 <section class="offers">
     <h2>Limited Time Offers!</h2>
-    <div class="carousel-container">
-        <button class="prev-btn" onclick="prevSlide('.offer-grid')">&#10094;</button>
-        <div class="offer-grid">
+    <div class="slider-container" id="special-offer-slider">
+        <div class="slides">
             <div class="offer-card">
                 <img src="https://via.placeholder.com/300x200" alt="Offer 1">
                 <div class="offer-info">
                     <p>Discount on High-end GPU</p>
                     <h4>Offer 1</h4>
                     <div class="price">$149.99</div>
-                    <a href="#" class="cta-btn">Shop Now</a>
+                    <a href="#" class="cta-btn">Add to cart</a>
                 </div>
             </div>
             <div class="offer-card">
@@ -116,7 +134,7 @@
                     <p>Up to 50% off SSDs</p>
                     <h4>Offer 2</h4>
                     <div class="price">$99.99</div>
-                    <a href="#" class="cta-btn">Shop Now</a>
+                    <a href="#" class="cta-btn">Add to cart</a>
                 </div>
             </div>
             <div class="offer-card">
@@ -125,11 +143,30 @@
                     <p>Best Deals on RAM</p>
                     <h4>Offer 3</h4>
                     <div class="price">$49.99</div>
-                    <a href="#" class="cta-btn">Shop Now</a>
+                    <a href="#" class="cta-btn">Add to cart</a>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/300x200" alt="Offer 1">
+                <div class="offer-info">
+                    <p>Discount on High-end GPU</p>
+                    <h4>Offer 1</h4>
+                    <div class="price">$149.99</div>
+                    <a href="#" class="cta-btn">Add to cart</a>
+                </div>
+            </div>
+            <div class="offer-card">
+                <img src="https://via.placeholder.com/300x200" alt="Offer 1">
+                <div class="offer-info">
+                    <p>Discount on High-end GPU</p>
+                    <h4>Offer 1</h4>
+                    <div class="price">$149.99</div>
+                    <a href="#" class="cta-btn">Add to cart</a>
                 </div>
             </div>
         </div>
-        <button class="next-btn" onclick="nextSlide('.offer-grid')">&#10095;</button>
+        <button class="prev-btn" onclick="prevSlide('special-offer-slider')">&#10094;</button>
+        <button class="next-btn" onclick="nextSlide('special-offer-slider')">&#10095;</button>
     </div>
 </section>
 
@@ -145,7 +182,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Shop by Category</a></li>
                 <li><a href="#">Deals</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="#">Cart</a></li>
                 <li><a href="#">Support</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -153,7 +190,7 @@
         <div class="footer-contact">
             <h4>Contact Us</h4>
             <p>Email: support@Sparesphere.com</p>
-            <p>Phone: +1 234 567 890</p>
+            <p>Phone: +961 76 086 435</p>
         </div>
     </div>
     <div class="footer-bottom">
