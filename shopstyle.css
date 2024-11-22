@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styling the heading */
+.products .heading {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.products .heading span {
+    color: #6c0cbb;
+}
+
+/* Styling the product box container */
+.products .boxcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styling each product box */
+.products .box {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    height: 350px; 
+}
+
+.products .box .discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.products .box .image {
+    display: flex;
+    justify-content: center;  /* Horizontally center the image */
+    align-items: center;      /* Vertically center the image */
+    height: 200px;            /* Set a height for the image container */
+}
+
+.products .box .image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;      /* Make sure the image fits inside the container without stretching */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on image */
+.products .box:hover .image img {
+    transform: scale(1.05);
+}
+
+/* Icons & Buttons */
+.products .box .icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add to Cart Button */
+.products .box .cart-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a112f3;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.products .box .cart-btn:hover {
+    background-color: #e622c5;
+}
+
+/* Heart (Favorites) Button */
+.products .box .heart-btn,
+.products .box .share-btn {
+    font-size: 20px;
+    color: #a112f3;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.products .box .heart-btn:hover,
+.products .box .share-btn:hover {
+    color: #e622c5;
+}
+
+/* Styling product content */
+.products .box .content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.products .box .prices {
+    font-size: 16px;
+    color: #555;
+}
+
+.products .box .prices span {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.cart-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #a112f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.cart-container i {
+    font-size: 24px;
+}
+
+#cart-count {
+    font-size: 18px;
+    margin-left: 5px;
+    background-color: #e622c5;
+    border-radius: 50%;
+    padding: 3px 8px;
+}
+.products .box .icons {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+/* Heart Button - Default (Outline) */
+.products .box .heart-btn {
+    font-size: 18px;
+    color: #aaa; /* Light color for the outline heart */
+}
+
+/* Filled Heart */
+.products .box .heart-btn.filled {
+    color: #a83ce7; /* Red color for the filled heart */
+}
+
+/* Optional: Hover effect for the heart button */
+.products .box .heart-btn:hover {
+    color: #a83ce7; /* Change color on hover for fun */
+}
+
