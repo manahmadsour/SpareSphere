@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.products .heading {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.products .heading span {
+    color: #6c0cbb;
+}
+
+
+.products .boxcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+.products .box {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    height: 350px; 
+}
+
+.products .box .discount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.products .box .image {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    height: 200px;           
+}
+
+.products .box .image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;     
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.products .box:hover .image img {
+    transform: scale(1.05);
+}
+
+
+.products .box .icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.products .box .cart-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a112f3;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.products .box .cart-btn:hover {
+    background-color: #e622c5;
+}
+
+
+.products .box .heart-btn,
+.products .box .share-btn {
+    font-size: 20px;
+    color: #a112f3;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.products .box .heart-btn:hover,
+.products .box .share-btn:hover {
+    color: #e622c5;
+}
+
+
+.products .box .content h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.products .box .prices {
+    font-size: 16px;
+    color: #555;
+}
+
+.products .box .prices span {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.cart-container {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background-color: #a112f3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 100;
+}
+.cart-container i {
+    font-size: 24px;
+  
+}
+
+#cart-count {
+    font-size: 18px;
+    margin-left: 5px;
+    background-color: #e622c5;
+    border-radius: 50%;
+    padding: 3px 8px;
+}
+.products .box .icons {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.products .box .heart-btn {
+    font-size: 18px;
+    color: #aaa; 
+}
+
+.products .box .heart-btn.filled {
+    color: #a83ce7; 
+}
+
+.products .box .heart-btn:hover {
+    color: #a83ce7; 
+}
+
+body.light-theme {
+    background-color: #f3f4f6;
+    color: #333333;
+}
+
+body.dark-theme {
+    background-color: #1f2933;
+    color: #e2e8f0;
+}
+
+body.dark-theme .boxcontainer {
+    background-color: #2d3748;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme h1 {
+    color: #63b3ed;
+}
+
+label {
+    font-size: 1rem;
+    margin-right: 5px;
+    color: inherit;
+}
+
+select {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+body.dark-theme select {
+    background-color: #4a5568;
+    color: #e2e8f0;
+    border: 1px solid #718096;
+}
+
+body.dark-theme button {
+    background-color: #3182ce;
+}
+
+body.dark-theme button:hover {
+    background-color: #2b6cb0;
+}
+
+body.dark-theme .box {
+    background-color: #f687b3;
+}
+body.dark-theme .products .box .prices span{
+    color: rgb(235, 18, 18);
+}
