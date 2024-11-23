@@ -27,7 +27,9 @@ header {
 }
 
 .header-left {
-    display: flex;
+
+    display:flex ;
+    margin-left: 200px;
     align-items: center;
 }
 
@@ -45,6 +47,11 @@ header {
 }
 
 #login-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 20px;
+    margin-right: 10px;
     display: flex;
     align-items: center;
 }
@@ -197,6 +204,7 @@ h1 {
 }
 
 .product-card img, .offer-card img {
+    position: relative;
     width: 100%;
     height: auto;
 }
@@ -242,8 +250,9 @@ h1 {
     color: white;
     border: none;
     font-size: 2rem;
-    padding: 0 15px;
+    padding: 0px 10px;
     cursor: pointer;
+    z-index: 10;
 }
 
 .prev-btn {
@@ -293,6 +302,7 @@ footer {
 
 @media (max-width: 810px) {
     .hamburger {
+        position: absolute;
         display: block;
     }
     #login-link {
