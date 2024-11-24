@@ -20,7 +20,7 @@ body {
     justify-content: space-between; 
     align-items: center; 
     min-height: 100vh; 
-    background: linear-gradient(to bottom, #0f0c29, #302b63);
+    background: linear-gradient(to bottom, #0f0c29, #6256e1);
     padding-top: 60px; 
     overflow-x: hidden;
 }

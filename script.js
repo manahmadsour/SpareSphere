@@ -8,7 +8,7 @@ let slideIndex = 0;
 
 function showSlide(sliderId) {
     const slides = document.querySelector(`#${sliderId} .slides`);
-    const totalSlides = slides.children.length;
+    const totalSlides = slides.children.length-2;
     const cardsToShow = window.innerWidth <= 600 ? 1 : 3; 
 
   
