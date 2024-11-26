@@ -30,6 +30,7 @@ body {
 header {
     background: var(--primary-color);
     padding: 15px 20px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,14 +38,14 @@ header {
 }
 
 .header-left {
-
+height: 50px;
     display:flex ;
     margin-left: 100px;
     align-items: center;
 }
 
 #logo {
-    width: 80px;
+    width: 90px;
     height: auto;
     border-radius: 50%;
     margin-right: 10px;
@@ -60,7 +61,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: 20px;
+    margin-top: 17px;
     margin-right: 10px;
     display: flex;
     align-items: center;
@@ -311,6 +312,9 @@ footer {
     .hamburger {
         position: absolute;
         display: block;
+    }
+    #logo{
+        display:none
     }
     #login-link {
         display: flex;

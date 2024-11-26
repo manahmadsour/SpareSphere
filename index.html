@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/logo.ico"  type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SpareSphere</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,7 +13,7 @@
 <header>
     <div class="header-left">
         <img src="images/logo.jpg" alt="SpareSphere Logo" id="logo">
-        <div class="site-name">SpareSphere</div>
+        <div class="site-name"> SpareSphere</div>
     </div>
     <a href="login.html" id="login-link">
         <img src="images/login.png" alt="Login Icon">
@@ -69,48 +71,48 @@
     <div class="slider-container" id="popular-slider">
         <div class="slides">
             <div class="product-card">
-                <img src="images/ryzen CPU.png" alt="Product 1">
+                <img src="images/ryzen CPU.png" alt="High-performance CPU">
                 <div class="product-info">
                     <p>High-performance CPU</p>
-                    <h4>Product 1</h4>
-                    <div class="price">$199.99</div>
-                    <a href="" class="cart-btn">Add to cart</a>
+                    <h4>Ryzen 5 5600X</h4>
+                    <div class="price">$99.99</div>
+                    <button class="cart-btn" data-id="1"data-pic="images/ryzen CPU.png" data-name="Ryzen 5 5600X" data-price="199.99">Add to cart</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/RTX 4070.png" alt="Product 2">
+                <img src="images/RTX 4070.png" alt="Advanced Graphics Card">
                 <div class="product-info">
                     <p>Advanced Graphics Card</p>
-                    <h4>Product 2</h4>
-                    <div class="price">$299.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
+                    <h4>RTX 4070</h4>
+                    <div class="price">$29.99</div>
+                    <button class="cart-btn" data-id="2" data-pic="images/RTX 4070.png" data-name="RTX 4070" data-price="299.99">Add to cart</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/SSD.png" alt="Product 3">
+                <img src="images/SSD.png" alt="High-speed SSD">
                 <div class="product-info">
                     <p>High-speed SSD</p>
-                    <h4>Product 3</h4>
-                    <div class="price">$399.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
+                    <h4>Samsung 980 Pro</h4>
+                    <div class="price">$39.99</div>
+                    <button class="cart-btn" data-id="3" data-pic="images/SSD.png" data-name="Samsung 980 Pro" data-price="399.99">Add to cart</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/keyboard1.png" alt="Product 3">
+                <img src="images/keyboard1.png" alt="Mechanical Keyboard">
                 <div class="product-info">
-                    <p>High-speed SSD</p>
-                    <h4>Product 3</h4>
+                    <p>Mechanical Keyboard</p>
+                    <h4>Logitech G915</h4>
                     <div class="price">$59.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
+                    <button class="cart-btn" data-id="4" data-pic="images/keyboard1.png" data-name="Logitech G915" data-price="59.99">Add to cart</button>
                 </div>
             </div>
             <div class="product-card">
-                <img src="images/computer bag1.png" alt="Product 3">
+                <img src="images/keyboard3.png" alt="Mechanical Keyboard">
                 <div class="product-info">
-                    <p>Computer Bag</p>
-                    <h4>Product 3</h4>
-                    <div class="price">$49.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
+                    <p>Keyboard</p>
+                    <h4>Razor Oceon Blue</h4>
+                    <div class="price">$59.99</div>
+                    <button class="cart-btn" data-id="5" data-pic="images/keyboard3.png" data-name="Keyboard Oceon Blue" data-price="54.99">Add to cart</button>
                 </div>
             </div>
         </div>
@@ -129,7 +131,7 @@
                     <p>Mouse and Keyboard Set</p>
                     <h4>Offer 1</h4>
                     <div class="price">$79.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
+                    <button class="cart-btn" data-id="10" data-pic="images/keyboard-mouse.png" data-name="keyboard-mouse" data-price="79.99">Add to cart</button>
                 </div>
             </div>
             <div class="offer-card">
@@ -138,36 +140,28 @@
                     <p>Custom Keyboard</p>
                     <h4>Offer 2</h4>
                     <div class="price">$99.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
+                    <button class="cart-btn" data-id="11" data-pic="images/keyboard2.png" data-name="keyboard-mouse" data-price="99.99">Add to cart</button>
                 </div>
             </div>
             <div class="offer-card">
-                <img src="https://via.placeholder.com/300x200" alt="Offer 3">
+                <img src="images/computer bag.png" alt="Offer 3">
                 <div class="offer-info">
-                    <p>Best Deals on RAM</p>
+                    <p>Computer Bag</p>
                     <h4>Offer 3</h4>
                     <div class="price">$49.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
+                    <button class="cart-btn" data-id="12" data-pic="images/computer bag.png" data-name="Computer Bag" data-price="49.99">Add to cart</button>
                 </div>
             </div>
             <div class="offer-card">
-                <img src="https://via.placeholder.com/300x200" alt="Offer 1">
+                <img src="images/computer bag1.png" alt="Offer 1">
                 <div class="offer-info">
-                    <p>Discount on High-end GPU</p>
+                    <p>Computer Bag(Pink)</p>
                     <h4>Offer 1</h4>
-                    <div class="price">$149.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
+                    <div class="price">$59.49</div>
+                    <button class="cart-btn" data-id="13" data-pic="images/computer bag1.png" data-name="Compute Bag(Pink)" data-price="59.99">Add to cart</button>
                 </div>
             </div>
-            <div class="offer-card">
-                <img src="https://via.placeholder.com/300x200" alt="Offer 1">
-                <div class="offer-info">
-                    <p>Discount on High-end GPU</p>
-                    <h4>Offer 1</h4>
-                    <div class="price">$149.99</div>
-                    <a href="#" class="cart-btn">Add to cart</a>
-                </div>
-            </div>
+           
         </div>
         <button class="prev-btn" onclick="prevSlide('special-offer-slider')">&#10094;</button>
         <button class="next-btn" onclick="nextSlide('special-offer-slider')">&#10095;</button>
@@ -201,8 +195,8 @@
         <p>&copy; 2024 SpareSphere. All Rights Reserved.</p>
     </div>
 </footer>
-
+<script src="shop.js"></script>
 <script src="script.js"></script>
-<script> src="cart.js" </script>
+<script src="cart.js"></script>
 </body>
 </html>
