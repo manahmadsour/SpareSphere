@@ -3,61 +3,301 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sparespher - Categories</title>
+    <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="bycategories.css">
     <link rel="stylesheet" href="style.css">
+    <title>Sparesphere - Shop by Categories</title>
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <img src="images/logo.jpg" alt="SpareSphere Logo" id="logo">
-            <div class="site-name">SpareSphere</div>
-        </div>
-        <a href="login.html" id="login-link">
-            <img src="images/login.png" alt="Login Icon">
-        </a>
-        <div class="hamburger" onclick="toggleNav()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="bycategories.html">Shop by Category</a>
-            <a href="shop.html">Deals</a>
-            <a href="cart.html">Cart</a>
-            <a href="#">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<header>
+    <div class="header-left">
+        <img src="images/logo.jpg" alt="SpareSphere Logo" id="logo">
+        <div class="site-name">SpareSphere</div>
+    </div>
+    <a href="login.html" id="login-link">
+        <img src="images/login.png" alt="Login Icon">
+    </a>
+    <div class="hamburger" onclick="toggleNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="bycategories.html" class="dropbtn">Shop by Category</a>
+        <a href="shop.html">Deals</a>
+        <a href="cart.html">Cart</a>
+        <a href="About.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-    <section id="categories-section">
-        <h1>Categories</h1>
-        <section class="categories">
-            <div id="cpu" class="category-card">
-                <img src="https://th.bing.com/th?id=OIP.k5aOhvY5U-C23BLYwDGmRgHaEo&w=316&h=197&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="CPU">
-                <h3 class="card-title">CPUs</h3>
+<section id="categories-section">
+    <h1>Shop by Categories</h1>
+    
+    <!-- CPU Section -->
+    <section class="category-section" id="cpu-section">
+        <h2>CPUs</h2>
+        <div class="slider-container" id="cpu-slider">
+            <div class="slides">
+                <div class="product-card">
+                    <img src="images/ryzen CPU.png" alt="Ryzen 5 5600X">
+                    <div class="product-info">
+                        <h4>Ryzen 5 5600X</h4>
+                        <p>High-performance CPU</p>
+                        <div class="price">$199.99</div>
+                        <button class="cart-btn" data-id="1"data-pic="images/ryzen CPU.png" data-name="Ryzen 5 5600X" data-price="199.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/ryzen CPU.png" alt="Ryzen 5 5600X">
+                    <div class="product-info">
+                        <h4>Ryzen 5 5600X</h4>
+                        <p>High-performance CPU</p>
+                        <div class="price">$99.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/ryzen CPU.png" alt="Ryzen 5 5600X">
+                    <div class="product-info">
+                        <h4>Ryzen 5 5600X</h4>
+                        <p>High-performance CPU</p>
+                        <div class="price">$99.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/Intel_i9.png" alt="Intel i9">
+                    <div class="product-info">
+                        <h4>Intel Core i9</h4>
+                        <p>Top-tier processing power</p>
+                        <div class="price">$499.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-            <div id="gpu" class="category-card">
-                <img src="images/gpu img.png" alt="GPU">
-                <h3 class="card-title">GPUs</h3>
-            </div>
-            <div id="motherboard" class="category-card">
-                <img src="images/motherboard img.jpg" alt="Motherboard">
-                <h3 class="card-title">Motherboards</h3>
-            </div>
-            <div id="ram" class="category-card">
-                <img src="https://th.bing.com/th/id/OIP.ykKYxUFph92pNZZugw3U0wHaE8?w=262&h=180&c=7&r=0&o=5&pid=1.7" alt="RAM">
-                <h3 class="card-title">RAM</h3>
-            </div>
-            <div id="accessories" class="category-card">
-                <img src="images/Accessories.png" alt="Accessories">
-                <h3 class="card-title">Accessories</h3>
-            </div>
-        </section>
+            <button class="prev-btn" onclick="prevSlide('cpu-slider')">&#10094;</button>
+            <button class="next-btn" onclick="nextSlide('cpu-slider')">&#10095;</button>
+        </div>
     </section>
 
-    <script src="bycategories.js"></script>
-    <script src="script.js"></script>
+    <!-- GPU Section -->
+    <section class="category-section" id="gpu-section">
+        <h2>GPUs</h2>
+        <div class="slider-container" id="gpu-slider">
+            <div class="slides">
+                <div class="product-card">
+                    <img src="images/RTX_4070.png" alt="RTX 4070">
+                    <div class="product-info">
+                        <h4>RTX 4070</h4>
+                        <p>Advanced Graphics Card</p>
+                        <div class="price">$299.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/RTX_3080.png" alt="RTX 3080">
+                    <div class="product-info">
+                        <h4>RTX 3080</h4>
+                        <p>Ultimate gaming performance</p>
+                        <div class="price">$799.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <button class="prev-btn" onclick="prevSlide('gpu-slider')">&#10094;</button>
+            <button class="next-btn" onclick="nextSlide('gpu-slider')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Motherboard Section -->
+    <section class="category-section" id="motherboard-section">
+        <h2>Motherboards</h2>
+        <div class="slider-container" id="motherboard-slider">
+            <div class="slides">
+                <div class="product-card">
+                    <img src="images/motherboard img.jpg" alt="ASUS ROG Strix">
+                    <div class="product-info">
+                        <h4>ASUS ROG Strix</h4>
+                        <p>High-end motherboard for gamers</p>
+                        <div class="price">$189.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/motherboard_img.jpg" alt="ASUS ROG Strix">
+                    <div class="product-info">
+                        <h4>ASUS ROG Strix</h4>
+                        <p>High-end motherboard for gamers</p>
+                        <div class="price">$189.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/motherboard_img.jpg" alt="ASUS ROG Strix">
+                    <div class="product-info">
+                        <h4>ASUS ROG Strix</h4>
+                        <p>High-end motherboard for gamers</p>
+                        <div class="price">$189.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/MSI_motherboard.png" alt="MSI Motherboard">
+                    <div class="product-info">
+                        <h4>MSI Z590-A Pro</h4>
+                        <p>Reliable motherboard for professionals</p>
+                        <div class="price">$139.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <button class="prev-btn" onclick="prevSlide('motherboard-slider')">&#10094;</button>
+            <button class="next-btn" onclick="nextSlide('motherboard-slider')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- RAM Section -->
+    <section class="category-section" id="ram-section">
+        <h2>RAM</h2>
+        <div class="slider-container" id="ram-slider">
+            <div class="slides">
+                <div class="product-card">
+                    <img src="images/ram_img.jpg" alt="Corsair Vengeance">
+                    <div class="product-info">
+                        <h4>Corsair Vengeance</h4>
+                        <p>16GB DDR4 RAM</p>
+                        <div class="price">$99.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/ram_img.jpg" alt="Corsair Vengeance">
+                    <div class="product-info">
+                        <h4>Corsair Vengeance</h4>
+                        <p>16GB DDR4 RAM</p>
+                        <div class="price">$99.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/ram_img.jpg" alt="Corsair Vengeance">
+                    <div class="product-info">
+                        <h4>Corsair Vengeance</h4>
+                        <p>16GB DDR4 RAM</p>
+                        <div class="price">$99.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/kingston_ram.png" alt="Kingston Fury">
+                    <div class="product-info">
+                        <h4>Kingston Fury</h4>
+                        <p>32GB DDR4 RAM</p>
+                        <div class="price">$149.99</div>
+                        <button class="cart-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <button class="prev-btn" onclick="prevSlide('ram-slider')">&#10094;</button>
+            <button class="next-btn" onclick="nextSlide('ram-slider')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Accessories Section -->
+    <section class="category-section" id="accessories-section">
+        <h2>Accessories</h2>
+        <div class="slider-container" id="accessories-slider">
+            <div class="slides">
+                <div class="product-card">
+                    <img src="images/keyboard1.png" alt="Mechanical Keyboard">
+                    <div class="product-info">
+                        <p>Mechanical Keyboard</p>
+                        <h4>Logitech G915</h4>
+                        <div class="price">$59.99</div>
+                        <button class="cart-btn" data-id="4" data-pic="images/keyboard1.png" data-name="Logitech G915" data-price="59.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/keyboard3.png" alt="Mechanical Keyboard">
+                    <div class="product-info">
+                        <p>Keyboard</p>
+                        <h4>Razor Oceon Blue</h4>
+                        <div class="price">$59.99</div>
+                        <button class="cart-btn" data-id="5" data-pic="images/keyboard3.png" data-name="Keyboard Oceon Blue" data-price="54.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/keyboard-mouse.png" alt="Offer 1">
+                    <div class="product-info">
+                        <p>Mouse and Keyboard Set</p>
+                        <h4>Offer 1</h4>
+                        <div class="price">$79.99</div>
+                        <button class="cart-btn" data-id="10" data-pic="images/keyboard-mouse.png" data-name="keyboard-mouse" data-price="79.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/keyboard2.png" alt="Offer 2">
+                    <div class="product-info">
+                        <p>Custom Keyboard</p>
+                        <h4>Offer 2</h4>
+                        <div class="price">$99.99</div>
+                        <button class="cart-btn" data-id="11" data-pic="images/keyboard2.png" data-name="keyboard-mouse" data-price="99.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/computer bag.png" alt="Offer 3">
+                    <div class="product-info">
+                        <p>Computer Bag</p>
+                        <h4>Offer 3</h4>
+                        <div class="price">$49.99</div>
+                        <button class="cart-btn" data-id="12" data-pic="images/computer bag.png" data-name="Computer Bag" data-price="49.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/computer bag1.png" alt="Offer 1">
+                    <div class="product-info">
+                        <p>Computer Bag(Pink)</p>
+                        <h4>Offer 1</h4>
+                        <div class="price">$59.49</div>
+                        <button class="cart-btn" data-id="13" data-pic="images/computer bag1.png" data-name="Compute Bag(Pink)" data-price="59.99">Add to cart</button>
+                    </div>
+                    </div>
+            </div>
+            <button class="prev-btn" onclick="prevSlide('accessories-slider')">&#10094;</button>
+            <button class="next-btn" onclick="nextSlide('accessories-slider')">&#10095;</button>
+        </div>
+    
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <h3>SpareSphere</h3>
+            <p>Your one-stop shop for all your PC building needs.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="bycategories.html">Shop by Category</a></li>
+                <li><a href="shop.html">Deals</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>Email: support@Sparesphere.com</p>
+            <p>Phone: +961 76 086 435</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 SpareSphere. All Rights Reserved.</p>
+    </div>
+</footer>
+<script src="script.js"></script>
 </body>
 </html>

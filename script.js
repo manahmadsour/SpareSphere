@@ -61,7 +61,6 @@ function showAddToCartAlert(itemName) {
     alertContainer.classList.add('cart-alert');
     alertContainer.textContent = `${itemName} has been added to your cart!`;
 
-    // Style the alert
     alertContainer.style.position = 'fixed';
     alertContainer.style.top = '20px';
     alertContainer.style.left = '50%';
@@ -115,7 +114,6 @@ function displayCart() {
     totalPriceElement.textContent = totalPrice.toFixed(2);
 }
 
-// Update cart when quantity changes
 document.addEventListener('change', function(event) {
     if (event.target.classList.contains('quantity-input')) {
         const itemId = event.target.getAttribute('data-id');
@@ -126,25 +124,22 @@ document.addEventListener('change', function(event) {
 
         if (item) {
             item.quantity = newQuantity;
-            // Update localStorage with the updated cart
+
             localStorage.setItem("cart", JSON.stringify(cart));
-            displayCart();  // Update the cart display
+            displayCart();
         }
     }
 });
 
-// Remove item from cart
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('remove-item')) {
         const itemId = event.target.getAttribute('data-id');
         
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        // Remove the item from the cart
         cart = cart.filter(item => item.id != itemId);
         
-        // Update localStorage with the updated cart
         localStorage.setItem("cart", JSON.stringify(cart));
-        displayCart();  // Update the cart display
+        displayCart();
     }
 });
 
