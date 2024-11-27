@@ -131,7 +131,7 @@ body {
     margin-bottom: 40px;
 }
 
-.skills button {
+.skills a {
     font-size: 22px;
     text-align: center;
     letter-spacing: 2px;
@@ -142,9 +142,10 @@ body {
     background-color: darkviolet;
     color: white;
     cursor: pointer;
+    text-decoration: none; 
 }
 
-.skills button:hover {
+.skills a:hover {
     transition: 1s;
     background-color: #ecf5f5;
     color: #00999c;
