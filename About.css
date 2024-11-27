@@ -230,4 +230,31 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+    .hamburger {
+        position: absolute;
+        display: block;
+    }
+    #logo{
+        display:none
+    }
+    #login-link {
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* Aligns login link to the right */
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    .nav-links a {
+        padding: 15px 0;
+        color: var(--text-color-light);
+    }
 }
