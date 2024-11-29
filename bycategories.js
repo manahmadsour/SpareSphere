@@ -39,3 +39,30 @@
         showSlide('ram-slider');
         showSlide('accessories-slider');
     };
+    function showAddToCartAlert(itemName) {
+        const alertContainer = document.createElement('div');
+        alertContainer.classList.add('cart-alert');
+        alertContainer.textContent = `${itemName} has been added to your cart!`;
+    
+        alertContainer.style.position = 'fixed';
+        alertContainer.style.top = '20px';
+        alertContainer.style.left = '50%';
+        alertContainer.style.transform = 'translateX(-50%)';
+        alertContainer.style.padding = '10px 20px';
+        alertContainer.style.backgroundColor = 'rgba(0, 123, 255, 0.8)';
+        alertContainer.style.color = 'white';
+        alertContainer.style.borderRadius = '5px';
+        alertContainer.style.fontSize = '16px';
+        alertContainer.style.zIndex = '9999';
+        alertContainer.style.transition = 'opacity 0.5s ease-in-out';
+    
+        document.body.appendChild(alertContainer);
+    
+        // Fade out the alert after 1 second
+        setTimeout(() => {
+            alertContainer.style.opacity = '0';
+            setTimeout(() => {
+                alertContainer.remove(); // Remove the alert from the DOM after it fades out
+            }, 500); // After fade-out completes
+        }, 1000); // Alert stays for 1 second
+    }

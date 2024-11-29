@@ -46,7 +46,7 @@ h2 {
 
 .product-card {
     flex: 0 0 auto;
-    width: 30%; /* Adjust for 3 cards per row */
+    width: 30%;
     margin-right: 20px;
     background-color: #fff;
     border-radius: 10px;
@@ -61,6 +61,7 @@ h2 {
 }
 
 .product-card img {
+    object-fit: cover;
     width: 100%;
     height: auto;
     border-bottom: 2px solid #eee;
@@ -101,6 +102,7 @@ h2 {
 }
 
 .prev-btn {
+    margin-right: 20px;
     left: 0;
 }
 

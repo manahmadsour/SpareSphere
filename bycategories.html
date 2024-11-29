@@ -12,7 +12,7 @@
 <header>
     <div class="header-left">
         <img src="images/logo.jpg" alt="SpareSphere Logo" id="logo">
-        <div class="site-name">SpareSphere</div>
+        <a href="index.html"><div class="site-name"> SpareSphere</div></a>
     </div>
     <a href="login.html" id="login-link">
         <img src="images/login.png" alt="Login Icon">
@@ -41,41 +41,51 @@
         <div class="slider-container" id="cpu-slider">
             <div class="slides">
                 <div class="product-card">
-                    <img src="images/ryzen CPU.png" alt="Ryzen 5 5600X">
+                    <img src="images/ryzen CPU.png" alt="High-performance CPU">
                     <div class="product-info">
-                        <h4>Ryzen 5 5600X</h4>
+                        <h4>Ryzen 7 5600X</h4>
                         <p>High-performance CPU</p>
                         <div class="price">$199.99</div>
-                        <button class="cart-btn" data-id="1"data-pic="images/ryzen CPU.png" data-name="Ryzen 5 5600X" data-price="199.99">Add to cart</button>
+                        <button class="cart-btn" data-id="1"data-pic="images/ryzen CPU.png" data-name="Ryzen 7 5600X" data-price="199.99">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="images/ryzen CPU.png" alt="Ryzen 5 5600X">
+                    <img src="images/ryzen 3.png" alt="High-performance CPU">
                     <div class="product-info">
-                        <h4>Ryzen 5 5600X</h4>
+                        <h4>Ryzen 3 3090X</h4>
                         <p>High-performance CPU</p>
                         <div class="price">$99.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <button class="cart-btn" data-id="200"data-pic="images/ryzen 3.pnj" data-name="Ryzen 3 3090X" data-price="99.99">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="images/ryzen CPU.png" alt="Ryzen 5 5600X">
+                    <img src="images/ryzen 5.png" alt="High-performance CPU">
                     <div class="product-info">
-                        <h4>Ryzen 5 5600X</h4>
+                        <h4>Ryzen 5 3090X</h4>
                         <p>High-performance CPU</p>
-                        <div class="price">$99.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <div class="price">$149.99</div>
+                        <button class="cart-btn" data-id="201"data-pic="images/ryzen 5.pnj" data-name="Ryzen 5 3090X" data-price="149.99">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="images/Intel_i9.png" alt="Intel i9">
+                    <img src="images/intel i9.png" alt="Intel i9">
                     <div class="product-info">
                         <h4>Intel Core i9</h4>
                         <p>Top-tier processing power</p>
-                        <div class="price">$499.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <div class="price">$299.99</div>
+                        <button class="cart-btn" data-id="202"data-pic="images/intel i9.pnj" data-name="intel i9" data-price="299.99">Add to cart</button>
                     </div>
                 </div>
+                <div class="product-card">
+                    <img src="images/intel i7.png" alt="Intel i9">
+                    <div class="product-info">
+                        <h4>Intel Core i7</h4>
+                        <p>Top-tier processing power</p>
+                        <div class="price">$209.99</div>
+                        <button class="cart-btn" data-id="203"data-pic="images/intel i7.pnj" data-name="intel i7" data-price="209.99">Add to cart</button>
+                    </div>
+                </div>
+               
             </div>
             <button class="prev-btn" onclick="prevSlide('cpu-slider')">&#10094;</button>
             <button class="next-btn" onclick="nextSlide('cpu-slider')">&#10095;</button>
@@ -88,21 +98,39 @@
         <div class="slider-container" id="gpu-slider">
             <div class="slides">
                 <div class="product-card">
-                    <img src="images/RTX_4070.png" alt="RTX 4070">
+                    <img src="images/rtx 4070.png" alt="RTX 4070">
                     <div class="product-info">
                         <h4>RTX 4070</h4>
                         <p>Advanced Graphics Card</p>
-                        <div class="price">$299.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <div class="price">$499.99</div>
+                        <button class="cart-btn" data-id="210"data-pic="images/rtx 4070.pnj" data-name="RTX 4070" data-price="499.99">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="images/RTX_3080.png" alt="RTX 3080">
+                    <img src="images/rtx 4060.png" alt="RTX 4070">
                     <div class="product-info">
-                        <h4>RTX 3080</h4>
-                        <p>Ultimate gaming performance</p>
-                        <div class="price">$799.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <h4>RTX 4060</h4>
+                        <p>Advanced Graphics Card</p>
+                        <div class="price">$399.99</div>
+                        <button class="cart-btn" data-id="211"data-pic="images/rtx 4060.pnj" data-name="RTX 4060" data-price="399.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rtx 4070 1.png" alt="RTX 4070">
+                    <div class="product-info">
+                        <h4>RTX 4070</h4>
+                        <p>Advanced Graphics Card</p>
+                        <div class="price">$499.99</div>
+                        <button class="cart-btn" data-id="212"data-pic="images/rtx 4070 1.pnj" data-name="RTX 4070" data-price="499.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/rtx 3090.png" alt="RTX 4070">
+                    <div class="product-info">
+                        <h4>RTX 3090</h4>
+                        <p>Advanced Graphics Card</p>
+                        <div class="price">$199.99</div>
+                        <button class="cart-btn" data-id="213"data-pic="images/rtx 3090.pnj" data-name="RTX 3090" data-price="299.99">Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -122,36 +150,28 @@
                         <h4>ASUS ROG Strix</h4>
                         <p>High-end motherboard for gamers</p>
                         <div class="price">$189.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <button class="cart-btn" data-id="220" data-pic="images/motherboard img.jpg" data-name="Motherboard" data-price="189.99">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="images/motherboard_img.jpg" alt="ASUS ROG Strix">
+                    <img src="images/strix.png" alt="ASUS ROG Strix">
                     <div class="product-info">
-                        <h4>ASUS ROG Strix</h4>
+                        <h4>ASUS Strix</h4>
                         <p>High-end motherboard for gamers</p>
-                        <div class="price">$189.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <div class="price">$149.99</div>
+                        <button class="cart-btn" data-id="221" data-pic="images/strix.png" data-name="ASUS Strix" data-price="149.99">Add to cart</button>
                     </div>
                 </div>
                 <div class="product-card">
-                    <img src="images/motherboard_img.jpg" alt="ASUS ROG Strix">
+                    <img src="images/Asus.png" alt="ASUS ROG Strix">
                     <div class="product-info">
-                        <h4>ASUS ROG Strix</h4>
+                        <h4>ASUS</h4>
                         <p>High-end motherboard for gamers</p>
-                        <div class="price">$189.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <div class="price">$199.99</div>
+                        <button class="cart-btn" data-id="222" data-pic="images/Asus.png" data-name="ASUS PRO" data-price="199.99">Add to cart</button>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="images/MSI_motherboard.png" alt="MSI Motherboard">
-                    <div class="product-info">
-                        <h4>MSI Z590-A Pro</h4>
-                        <p>Reliable motherboard for professionals</p>
-                        <div class="price">$139.99</div>
-                        <button class="cart-btn">Add to Cart</button>
-                    </div>
-                </div>
+                
             </div>
             <button class="prev-btn" onclick="prevSlide('motherboard-slider')">&#10094;</button>
             <button class="next-btn" onclick="nextSlide('motherboard-slider')">&#10095;</button>
@@ -164,39 +184,39 @@
         <div class="slider-container" id="ram-slider">
             <div class="slides">
                 <div class="product-card">
-                    <img src="images/ram_img.jpg" alt="Corsair Vengeance">
+                    <img src="images/ram beast.png" alt="Fury Beast">
                     <div class="product-info">
-                        <h4>Corsair Vengeance</h4>
+                        <h4>Fure Beast</h4>
                         <p>16GB DDR4 RAM</p>
-                        <div class="price">$99.99</div>
-                        <button class="cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/ram_img.jpg" alt="Corsair Vengeance">
-                    <div class="product-info">
-                        <h4>Corsair Vengeance</h4>
-                        <p>16GB DDR4 RAM</p>
-                        <div class="price">$99.99</div>
-                        <button class="cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/ram_img.jpg" alt="Corsair Vengeance">
-                    <div class="product-info">
-                        <h4>Corsair Vengeance</h4>
-                        <p>16GB DDR4 RAM</p>
-                        <div class="price">$99.99</div>
-                        <button class="cart-btn">Add to Cart</button>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="images/kingston_ram.png" alt="Kingston Fury">
-                    <div class="product-info">
-                        <h4>Kingston Fury</h4>
-                        <p>32GB DDR4 RAM</p>
                         <div class="price">$149.99</div>
-                        <button class="cart-btn">Add to Cart</button>
+                        <button class="cart-btn" data-id="230" data-pic="images/ram beast.png" data-name="Fury Beast" data-price="149.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/ram vengence.png" alt="Corsair Vengeance">
+                    <div class="product-info">
+                        <h4>Corsair Vengeance</h4>
+                        <p>16GB DDR4 RAM</p>
+                        <div class="price">$159.99</div>
+                        <button class="cart-btn" data-id="231" data-pic="images/ram vengence.png" data-name="Crosair Vengeance" data-price="159.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/ram sabrent.png" alt="Corsair Vengeance">
+                    <div class="product-info">
+                        <h4>Sabrent</h4>
+                        <p>16GB DDR4 RAM</p>
+                        <div class="price">$139.99</div>
+                        <button class="cart-btn" data-id="232" data-pic="images/ram sabrent.png" data-name="Sabrent" data-price="139.99">Add to cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/ram tridentz.png" alt="Tridentz">
+                    <div class="product-info">
+                        <h4>Tridentz</h4>
+                        <p>32GB DDR4 RAM</p>
+                        <div class="price">$199.99</div>
+                        <button class="cart-btn" data-id="233" data-pic="images/ram tridentz.png" data-name="Tridentz" data-price="199.99">Add to cart</button>
                     </div>
                 </div>
             </div>
@@ -299,5 +319,8 @@
     </div>
 </footer>
 <script src="script.js"></script>
+<script src="bycategories.js"></script>
+<script src="cart.js"></script>
+
 </body>
 </html>
