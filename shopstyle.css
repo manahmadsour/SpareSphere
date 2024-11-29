@@ -109,7 +109,6 @@ body {
     color: #e622c5;
 }
 
-
 .products .box .content h3 {
     font-size: 18px;
     color: #333;
@@ -169,11 +168,11 @@ body {
 }
 
 .products .box .heart-btn.filled {
-    color: #a83ce7; 
+    color: #e71d1d; 
 }
 
 .products .box .heart-btn:hover {
-    color: #a83ce7; 
+    color: #ff0808; 
 }
 
 body.light-theme {
@@ -187,7 +186,7 @@ body.dark-theme {
 }
 
 body.dark-theme .boxcontainer {
-    background-color: #2d3748;
+    background-color: #1f2933;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -226,8 +225,14 @@ body.dark-theme button:hover {
 }
 
 body.dark-theme .box {
-    background-color: #f687b3;
+    background-color:#52276b;
 }
 body.dark-theme .products .box .prices span{
     color: rgb(235, 18, 18);
+}
+body.dark-theme .boxcontainer .box h3{
+    color: #ffffff;
+}
+body.dark-theme .products .box .prices{
+    color: #fff;
 }

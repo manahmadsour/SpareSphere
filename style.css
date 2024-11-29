@@ -277,7 +277,7 @@ h1 {
 footer {
     background: var(--primary-color);
     color: var(--text-color-light);
- padding: 30px 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 

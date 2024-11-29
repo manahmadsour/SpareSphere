@@ -104,6 +104,7 @@ body {
 .about {
     background: url(images/Logo.PNG) no-repeat left;
     background-size: 55%;
+    background-position: -10% center;
     background-color: #fdfdfd;
     overflow: hidden;
     padding: 100px 0;
