@@ -8,9 +8,9 @@
         if (slideIndex >= totalSlides) {
             slideIndex = 0;
         } else if (slideIndex < 0) {
-            slideIndex = totalSlides - 2;
+            slideIndex = totalSlides;
         }
-
+  
         slides.style.transform = `translateX(-${(slideIndex * (100 / cardsToShow))}%)`;
     }
 
