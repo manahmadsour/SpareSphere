@@ -1,0 +1,1 @@
+let login=document.getElementById("log")

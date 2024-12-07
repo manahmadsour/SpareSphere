@@ -2,9 +2,9 @@
     let slideIndex = 0;
 
     function showSlide(sliderId) {
-        const slides = document.querySelector(`#${sliderId} .slides`);
-        const totalSlides = slides.children.length;
-        const cardsToShow = window.innerWidth <= 600 ? 1 : 3; 
+        let slides = document.querySelector(`#${sliderId} .slides`);
+        let totalSlides = slides.children.length;
+        let cardsToShow = window.innerWidth <= 600 ? 1 : 3; 
         if (slideIndex >= totalSlides) {
             slideIndex = 0;
         } else if (slideIndex < 0) {
@@ -40,7 +40,7 @@
         showSlide('accessories-slider');
     };
     function showAddToCartAlert(itemName) {
-        const alertContainer = document.createElement('div');
+        let alertContainer = document.createElement('div');
         alertContainer.classList.add('cart-alert');
         alertContainer.textContent = `${itemName} has been added to your cart!`;
     

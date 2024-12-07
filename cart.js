@@ -1,15 +1,15 @@
 
 function toggleNav() {
-    const nav = document.querySelector('nav');
+   let nav = document.querySelector('nav');
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
 
 let slideIndex = 0;
 
 function showSlide(sliderId) {
-    const slides = document.querySelector(`#${sliderId} .slides`);
-    const totalSlides = slides.children.length-2;
-    const cardsToShow = window.innerWidth <= 600 ? 1 : 3; 
+   let slides = document.querySelector(`#${sliderId} .slides`);
+   let totalSlides = slides.children.length-2;
+   let cardsToShow = window.innerWidth <= 600 ? 1 : 3; 
 
   
     if (slideIndex >= totalSlides) {
@@ -40,9 +40,9 @@ window.onresize = function() {
 };
 
 function addToCart(itemId, itemName, itemPrice, itemPic) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    const existingItem = cart.find(item => item.id === itemId);
+   let existingItem = cart.find(item => item.id === itemId);
 
     if (existingItem) {
         existingItem.quantity += 1; 
@@ -57,21 +57,21 @@ function addToCart(itemId, itemName, itemPrice, itemPic) {
     displayCart()
 }
 document.addEventListener('DOMContentLoaded', () => {
-    const cartButtons = document.querySelectorAll('.cart-btn');
+   let cartButtons = document.querySelectorAll('.cart-btn');
 
     cartButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const itemId = button.getAttribute('data-id');
-            const itemName = button.getAttribute('data-name');
-            const itemPrice = parseFloat(button.getAttribute('data-price'));
-            const itemPic = button.getAttribute('data-pic');
+           let itemId = button.getAttribute('data-id');
+           let itemName = button.getAttribute('data-name');
+           let itemPrice = parseFloat(button.getAttribute('data-price'));
+           let itemPic = button.getAttribute('data-pic');
             addToCart(itemId, itemName, itemPrice,itemPic);
         });
     });
 });
 function displayCart() {
-    const cartItemsContainer = document.getElementById('cart-items');
-    const totalPriceElement = document.getElementById("total-price");
+   let cartItemsContainer = document.getElementById('cart-items');
+   let totalPriceElement = document.getElementById("total-price");
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -81,7 +81,7 @@ function displayCart() {
 
     cart.forEach(item => {
         totalPrice += item.price * item.quantity; 
-        const row = document.createElement('tr');
+       let row = document.createElement('tr');
         row.setAttribute('data-item-id', item.id);
         row.innerHTML = `
             <td><img src="${item.pic}" alt="${item.name}" class="cart-item-image" width="50"></td>
@@ -102,11 +102,11 @@ function displayCart() {
 // Update cart when quantity changes
 document.addEventListener('change', function(event) {
     if (event.target.classList.contains('quantity-input')) {
-        const itemId = event.target.getAttribute('data-id');
-        const newQuantity = parseInt(event.target.value);
+       let itemId = event.target.getAttribute('data-id');
+       let newQuantity = parseInt(event.target.value);
 
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        const item = cart.find(item => item.id == itemId);
+       let item = cart.find(item => item.id == itemId);
 
         if (item) {
             item.quantity = newQuantity;
@@ -120,7 +120,7 @@ document.addEventListener('change', function(event) {
 // Remove item from cart
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('remove-item')) {
-        const itemId = event.target.getAttribute('data-id');
+       let itemId = event.target.getAttribute('data-id');
         
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         // Remove the item from the cart
@@ -135,7 +135,7 @@ document.addEventListener('click', function(event) {
 document.addEventListener('DOMContentLoaded', () => {
     displayCart();
 
-    const cartButtons = document.querySelectorAll('.cart-btn');
+   let cartButtons = document.querySelectorAll('.cart-btn');
     cartButtons.forEach(button => {
         button.addEventListener('click', () => {
             addToCart(button);
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Function to clear the cart with confirmation
 function clearCart() {
     // Ask the user for confirmation before clearing the cart
-    const userConfirmed = confirm('Are you sure you want to clear the cart?');
+   let userConfirmed = confirm('Are you sure you want to clear the cart?');
 
     if (userConfirmed) {
         // Remove cart data from localStorage
@@ -165,13 +165,13 @@ document.getElementById('clear-cart').addEventListener('click', clearCart);
 document.addEventListener('DOMContentLoaded', () => {
     displayCart();
     
-    const cartButtons = document.querySelectorAll('.cart-btn');
+   let cartButtons = document.querySelectorAll('.cart-btn');
     cartButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const itemId = button.getAttribute('data-id');
-            const itemName = button.getAttribute('data-name');
-            const itemPrice = parseFloat(button.getAttribute('data-price'));
-            const itemPic = button.getAttribute('data-pic');
+           let itemId = button.getAttribute('data-id');
+           let itemName = button.getAttribute('data-name');
+           let itemPrice = parseFloat(button.getAttribute('data-price'));
+           let itemPic = button.getAttribute('data-pic');
             addToCart(itemId, itemName, itemPrice, itemPic);
         });
     });
