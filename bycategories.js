@@ -1,44 +1,53 @@
+let slideIndices = {};
 
-    let slideIndex = 0;
+function initializeSlideIndex(sliderId) {
+    slideIndices[sliderId] = 0;
+}
 
-    function showSlide(sliderId) {
-        let slides = document.querySelector(`#${sliderId} .slides`);
-        let totalSlides = slides.children.length;
-        let cardsToShow = window.innerWidth <= 600 ? 1 : 3; 
-        if (slideIndex >= totalSlides) {
-            slideIndex = 0;
-        } else if (slideIndex < 0) {
-            slideIndex = totalSlides;
-        }
-  
-        slides.style.transform = `translateX(-${(slideIndex * (100 / cardsToShow))}%)`;
+function showSlide(sliderId) {
+    let slider = document.querySelector(`#${sliderId}`);
+    let slides = slider.querySelector('.slides');
+    let totalSlides = slides.children.length;
+    let cardsToShow = window.innerWidth <= 600 ? 1 : 3;
+
+
+    let slideIndex = slideIndices[sliderId];
+
+    if (slideIndex > totalSlides - cardsToShow) {
+        slideIndices[sliderId] = 0;
+    } else if (slideIndex < 0) {
+        slideIndices[sliderId] = totalSlides - cardsToShow;
     }
 
-    function nextSlide(sliderId) {
-        slideIndex++;
+    slideIndex = slideIndices[sliderId];
+
+    slides.style.transform = `translateX(-${slideIndex * (100 / cardsToShow)}%)`;
+}
+
+function nextSlide(sliderId) {
+    slideIndices[sliderId]++;
+    showSlide(sliderId);
+}
+
+function prevSlide(sliderId) {
+    slideIndices[sliderId]--;
+    showSlide(sliderId);
+}
+
+window.onload = function () {
+    let sliderIds = ['cpu-slider', 'gpu-slider', 'motherboard-slider', 'ram-slider', 'accessories-slider'];
+
+    sliderIds.forEach(sliderId => {
+        initializeSlideIndex(sliderId);
         showSlide(sliderId);
-    }
+    });
+};
 
-    function prevSlide(sliderId) {
-        slideIndex--;
-        showSlide(sliderId);
-    }
+window.onresize = function () {
+    let sliderIds = ['cpu-slider', 'gpu-slider', 'motherboard-slider', 'ram-slider', 'accessories-slider'];
 
-    window.onload = function() {
-        showSlide('cpu-slider');
-        showSlide('gpu-slider');
-        showSlide('motherboard-slider');
-        showSlide('ram-slider');
-        showSlide('accessories-slider');
-    };
-
-    window.onresize = function() {
-        showSlide('cpu-slider');
-        showSlide('gpu-slider');
-        showSlide('motherboard-slider');
-        showSlide('ram-slider');
-        showSlide('accessories-slider');
-    };
+    sliderIds.forEach(sliderId => showSlide(sliderId));
+};
     function showAddToCartAlert(itemName) {
         let alertContainer = document.createElement('div');
         alertContainer.classList.add('cart-alert');
