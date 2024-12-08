@@ -25,9 +25,9 @@ document.querySelectorAll(".heart-btn").forEach(heart => {
 updateCartCount();
 
 function addToCart(itemId, itemName, itemPrice,itemPic) {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    const existingItem = cart.find(item => item.id === itemId);
+    let existingItem = cart.find(item => item.id === itemId);
 
     if (existingItem) {
         existingItem.quantity += 1; 
@@ -42,7 +42,7 @@ function addToCart(itemId, itemName, itemPrice,itemPic) {
     displayCart()
 }
 function showAddToCartAlert(itemName) {
-    const alertContainer = document.createElement('div');
+    let alertContainer = document.createElement('div');
     alertContainer.classList.add('cart-alert');
     alertContainer.textContent = `${itemName} has been added to your cart!`;
 
