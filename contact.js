@@ -1,4 +1,4 @@
-var inputs = document.querySelectorAll(".input");
+let inputs = document.querySelectorAll(".input");
 
 function focusFunc() {
   let parent = this.parentNode;
