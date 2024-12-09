@@ -75,13 +75,13 @@ function showAddToCartAlert(itemName) {
 
     document.body.appendChild(alertContainer);
 
-    // Fade out the alert after 1 second
+    
     setTimeout(() => {
         alertContainer.style.opacity = '0';
         setTimeout(() => {
-            alertContainer.remove(); // Remove the alert from the DOM after it fades out
-        }, 500); // After fade-out completes
-    }, 1000); // Alert stays for 1 second
+            alertContainer.remove(); 
+        }, 500);
+    }, 1000); 
 }
 
 function displayCart() {
