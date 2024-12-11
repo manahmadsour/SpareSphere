@@ -75,3 +75,6 @@ window.onresize = function () {
             }, 500); // After fade-out completes
         }, 1000); // Alert stays for 1 second
     }
+    themeSelector.addEventListener("change", () => {
+        document.body.className = themeSelector.value + "-theme";
+    });

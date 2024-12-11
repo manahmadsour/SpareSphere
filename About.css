@@ -1,4 +1,5 @@
 :root {
+    /* Root variables for theming */
     --primary-color: #6a0dad;
     --secondary-color: #ff6f61;
     --text-color-light: #ffffff;
@@ -12,11 +13,16 @@
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #6a0dad;
-    --text-color-light: #fff;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    font-family: Arial, sans-serif;
 }
 
+/* Header styles */
 header {
     background: var(--primary-color); 
     padding: 15px 20px; 
@@ -74,6 +80,7 @@ header {
     margin: 5px; 
 }
 
+/* Navigation styles */
 .nav-links {
     display: flex; 
     margin-right: 60px; 
@@ -88,19 +95,10 @@ header {
 }
 
 .nav-links a:hover {
-    color: #010c5e; 
+    color: #e0e0e0; /* Improved hover color contrast */
 }
 
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #f1f1f1;
-    font-family: Arial, sans-serif;
-}
-
+/* About section */
 .about {
     background: url(images/Logo.PNG) no-repeat left;
     background-size: 55%;
@@ -153,6 +151,7 @@ body {
     color: #00999c;
 }
 
+/* Footer styles */
 footer {
     background: var(--primary-color);
     color: var(--text-color-light);
@@ -195,7 +194,16 @@ footer {
     font-size: 0.9rem;
     color: #ccc;
 }
+.light-theme {
+    background-color: #f3f4f6;
+    color: #333333;
+}
 
+.dark-theme {
+    background-color: #1f2933;
+    color: #e2e8f0;
+}
+/* Media Queries for responsiveness */
 @media screen and (max-width: 1200px) {
     .inner-section {
         padding: 80px;
@@ -222,7 +230,7 @@ footer {
         padding: 60px;
     }
 
-    .skills button {
+    .skills a {
         font-size: 19px;
         padding: 5px;
         width: 160px;
@@ -232,18 +240,22 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+
     .hamburger {
         position: absolute;
         display: block;
     }
-    #logo{
-        display:none
+
+    #logo {
+        display: none;
     }
+
     #login-link {
         display: flex;
         align-items: center;
-        margin-left: auto; /* Aligns login link to the right */
+        margin-left: auto;
     }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -253,6 +265,10 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
     }
 
     .nav-links a {

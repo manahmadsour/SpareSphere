@@ -31,6 +31,14 @@
 </header>
 
 <body>
+    <div  class="light-theme">
+
+        <label for="themeSelector">Theme:</label>
+        <select id="themeSelector">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
     <div class="about">
         <div class="inner-section">
             <h1>About Us</h1>
@@ -69,6 +77,11 @@
             <p>&copy; 2024 SpareSphere. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+         themeSelector.addEventListener("change", () => {
+        document.body.className = themeSelector.value + "-theme";
+    });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

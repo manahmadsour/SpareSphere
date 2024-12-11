@@ -158,6 +158,68 @@ function clearCart() {
         alert('Cart clearing was canceled.');
     }
 }
+// Function to pay for the cart with confirmation
+function payCart() {
+    // Ask the user for confirmation before processing the payment
+    let userConfirmed = confirm('Are you sure you want to proceed with the payment?');
+
+    if (userConfirmed) {
+        // Retrieve cart data from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        // Generate receipt
+        let receipt = "Receipt:\n\n";
+        let totalPrice = 0;
+
+        cart.forEach(item => {
+            let itemTotal = item.price * item.quantity;
+            receipt += `${item.name} - $${item.price} x ${item.quantity} = $${itemTotal.toFixed(2)}\n`;
+            totalPrice += itemTotal;
+        });
+
+        receipt += `\nTotal Price: $${totalPrice.toFixed(2)}`;
+
+        // Clear cart data from localStorage
+        localStorage.removeItem('cart');
+        
+        // Update the cart display
+        displayCart();
+        
+        // Show the receipt to the user
+        showReceiptAlert(receipt);
+    } else {
+        // Do nothing if user cancels
+        alert('Payment was canceled.');
+    }
+}
+function showReceiptAlert(receipt) {
+    let alertContainer = document.createElement('div');
+    alertContainer.classList.add('receipt-alert');
+    alertContainer.textContent = receipt;
+
+    alertContainer.style.position = 'fixed';
+    alertContainer.style.top = '20px';
+    alertContainer.style.left = '50%';
+    alertContainer.style.transform = 'translateX(-50%)';
+    alertContainer.style.padding = '20px';
+    alertContainer.style.backgroundColor = 'rgba(0, 123, 255, 0.8)';
+    alertContainer.style.color = 'white';
+    alertContainer.style.borderRadius = '5px';
+    alertContainer.style.fontSize = '16px';
+    alertContainer.style.zIndex = '9999';
+    alertContainer.style.transition = 'opacity 0.5s ease-in-out';
+    alertContainer.style.whiteSpace = 'pre-line';
+
+    document.body.appendChild(alertContainer);
+
+    setTimeout(() => {
+        alertContainer.style.opacity = '0';
+        setTimeout(() => {
+            document.body.removeChild(alertContainer);
+        }, 500);
+    }, 4000);
+}
+document.getElementById('pay-cart').addEventListener('click', payCart);
 
 
 document.getElementById('clear-cart').addEventListener('click', clearCart);
@@ -176,4 +238,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
+themeSelector.addEventListener("change", () => {
+    document.body.className = themeSelector.value + "-theme";
+});

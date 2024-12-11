@@ -12,12 +12,17 @@
 }
 
 body {
+  min-width:fit-content;
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
 }
+.flex{
+display: flex;
 
+}
 .cart-container {
   max-width: 900px;
+  float: left;
   margin: 50px auto;
   padding: 20px;
   background-color: var(--text-color-light);
@@ -154,3 +159,114 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.container{
+  
+  width: 860px;
+  height: 500px;
+  margin-top: 10px;
+  border: 1px solid;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  justify-content:space-around;
+  overflow: hidden;
+}
+
+.container h1{
+  text-align: center;
+}
+
+.first-row{
+   display: flex;
+}
+
+.owner{
+  width: 100%;
+  margin-right: 40px;
+}
+
+.input-field{
+  border: 1px solid #110606;
+}
+
+.input-field input{
+  width: 100%;
+  border:none;
+  outline: none;
+  padding: 10px;
+}
+
+.selection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.selection select{
+  padding: 10px 20px;
+}
+
+.container button{
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.container button:hover{
+  background-color: dodgerblue;
+}
+
+.cards img{
+  width: 100px;
+
+}
+.light-theme {
+  background-color: #f3f4f6;
+  color: #0a0505;
+}
+
+.dark-theme {
+  background-color: #1f2933;
+  color: #e2e8f0;
+}
+
+.dark-theme .boxcontainer {
+  background-color: #1f2933;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme h1 {
+  color: #63b3ed;
+}
+.dark-theme select {
+  background-color: #4a5568;
+  color: #e2e8f0;
+  border: 1px solid #050c16;
+}
+
+.dark-theme button {
+  background-color: #3182ce;
+}
+
+.dark-theme button:hover {
+  background-color: #2b6cb0;
+}
+
+.dark-theme .box {
+  background-color:#52276b;
+}
+.dark-theme .products .box .prices span{
+  color: rgb(235, 18, 18);
+}
+.dark-theme .boxcontainer .box h3{
+  color: #ffffff;
+}
+.dark-theme .products .box .prices{
+  color: #fff;}

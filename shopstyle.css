@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin-bottom: 10px;
+    
 }
 
 .products .heading {
@@ -175,6 +175,23 @@ body {
     color: #ff0808; 
 }
 
+
+
+label {
+    font-size: 1rem;
+    margin-right: 5px;
+    color: inherit;
+}
+
+select {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #ffffff;
+    color: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 body.light-theme {
     background-color: #f3f4f6;
     color: #333333;
@@ -193,23 +210,6 @@ body.dark-theme .boxcontainer {
 body.dark-theme h1 {
     color: #63b3ed;
 }
-
-label {
-    font-size: 1rem;
-    margin-right: 5px;
-    color: inherit;
-}
-
-select {
-    padding: 6px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #ffffff;
-    color: inherit;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
 body.dark-theme select {
     background-color: #4a5568;
     color: #e2e8f0;
@@ -235,4 +235,7 @@ body.dark-theme .boxcontainer .box h3{
 }
 body.dark-theme .products .box .prices{
     color: #fff;
+}
+footer{
+    margin-top: 20px;
 }
